@@ -1,0 +1,28 @@
+{
+  "name": "schilli91/pattern-observer",
+  "description": "Observer pattern",
+  "keywords": [
+    "design",
+    "pattern",
+    "observer"
+  ],
+  "license": "DBAD",
+  "authors": [
+    {
+      "name": "Moritz Schillinger ",
+      "email": "moritzhansson@gmail.com"
+    }
+  ],
+  "type": "library",
+  "require": {
+    "php": ">=5.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "schilli91\\pattern-observer\\": "src/"
+    }
+  }
+}
