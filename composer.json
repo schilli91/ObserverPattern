@@ -1,5 +1,5 @@
 {
-  "name": "schilli91/pattern-observer",
+  "name": "Schilli91/ObserverPattern",
   "description": "Observer pattern",
   "keywords": [
     "design",
@@ -22,7 +22,7 @@
   },
   "autoload": {
     "psr-4": {
-      "schilli91\\pattern-observer\\": "src/"
+      "Schilli91\\ObserverPattern\\": "src/"
     }
   }
 }
