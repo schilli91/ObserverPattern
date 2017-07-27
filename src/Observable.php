@@ -17,12 +17,19 @@ class Observable{
     /**
      * @var ObserverInterface[]
      */
-    protected $observers = [];
+    protected $observers;
+
+    /**
+     * Observable constructor.
+     */
+    public function __construct(){
+        $this->observers = [];
+    }
 
     /**
      * @param ObserverInterface $observer
      */
-    protected function addObserver(ObserverInterface $observer){
+    public function addObserver(ObserverInterface $observer){
         if (!in_array($observer, $this->observers)) {
             $this->observers[] = $observer;
         }
@@ -31,7 +38,7 @@ class Observable{
     /**
      * @param ObserverInterface $observer
      */
-    protected function removeObserver(ObserverInterface $observer){
+    public function removeObserver(ObserverInterface $observer){
         if ($index = array_search($observer, $this->observers, true)) {
             unset($this->observers[$index]);
         }
@@ -40,7 +47,7 @@ class Observable{
     /**
      *
      */
-    protected function notifyObservers(){
+    public function notifyObservers(){
         foreach ($this->observers as $observer) {
             $observer->update();
         }
